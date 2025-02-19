@@ -1,13 +1,21 @@
 <script setup lang="ts">
-import LoginPage from "./components/LoginPage.vue";
-import FormBooking from "./components/FormBooking.vue";
-import { ref } from "vue";
+import LoginPage from "./page/LoginPage.vue";
+import FormBooking from "./page/FormBooking.vue";
+import { ref, onMounted } from "vue";
 
 const isLoggedIn = ref(false);
 
 function handleLoginSuccess() {
   isLoggedIn.value = true;
+  localStorage.setItem("isLoggedIn", "true");
 }
+
+onMounted(() => {
+  const savedLoginState = localStorage.getItem("isLoggedIn");
+  if (savedLoginState === "true") {
+    isLoggedIn.value = true;
+  }
+});
 </script>
 
 <template>
