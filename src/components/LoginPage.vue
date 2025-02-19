@@ -1,3 +1,14 @@
+<script>
+export default {
+  methods: {
+    login() {
+      // Your login logic here
+      this.$emit("login-success");
+    },
+  },
+};
+</script>
+
 <template>
   <div class="bg-linear-to-r to-[#9bc6f3] from-[#f7b9c6]">
     <div class="bg-[#3b3b3b62] flex justify-center items-center h-screen">
@@ -32,6 +43,7 @@
           <div class="mb-4">
             <button
               type="submit"
+              @click="login"
               class="w-full bg-linear-to-r to-[#9bc6f3] from-[#f7b9c6] text-white font-semibold p-2 rounded-md"
             >
               Login
@@ -42,11 +54,3 @@
     </div>
   </div>
 </template>
-<style scoped>
-.login-page {
-  @apply bg-center;
-  background-image: url("../assets/background.webp");
-  overflow: visible;
-  /* height: 110vh; */
-}
-</style>

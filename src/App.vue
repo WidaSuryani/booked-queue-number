@@ -1,9 +1,18 @@
 <script setup lang="ts">
 import LoginPage from "./components/LoginPage.vue";
+import FormBooking from "./components/FormBooking.vue";
+import { ref } from "vue";
+
+const isLoggedIn = ref(false);
+
+function handleLoginSuccess() {
+  isLoggedIn.value = true;
+}
 </script>
 
 <template>
-  <LoginPage />
+  <LoginPage v-if="!isLoggedIn" @login-success="handleLoginSuccess" />
+  <FormBooking v-else />
 </template>
 
 <style scoped>
