@@ -22,7 +22,3 @@ onMounted(() => {
 <template>
   <router-view />
 </template>
-
-<style scoped>
-/* Your styles here */
-</style>
