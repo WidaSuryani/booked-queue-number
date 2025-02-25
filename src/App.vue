@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import LoginPage from "./page/LoginPage.vue";
-import FormBooking from "./page/FormBooking.vue";
 import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
 
 const isLoggedIn = ref(false);
+const router = useRouter();
 
 function handleLoginSuccess() {
   isLoggedIn.value = true;
   localStorage.setItem("isLoggedIn", "true");
+  router.push({ name: "FormBooking" }); // Redirect to the booking page using named route
 }
 
 onMounted(() => {
@@ -19,21 +20,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <LoginPage v-if="!isLoggedIn" @login-success="handleLoginSuccess" />
-  <FormBooking v-else />
+  <router-view />
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+/* Your styles here */
 </style>
