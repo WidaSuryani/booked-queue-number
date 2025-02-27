@@ -3,7 +3,7 @@ import { useRouter } from "vue-router";
 </script> -->
 
 <template>
-  <nav class="bg-[#dce6f0]">
+  <nav class="bg-[#dae8f4]">
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto"
     >
@@ -32,7 +32,7 @@ import { useRouter } from "vue-router";
           />
         </svg>
       </button>
-      <div class="w-full md:block md:w-auto" id="navbar-default">
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul
           class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-y-reverse md:mt-0 md:border-0 float-end"
         >
@@ -53,7 +53,7 @@ import { useRouter } from "vue-router";
           </li>
         </ul>
       </div>
-      <div class="w-full md:block md:w-auto">
+      <div class="hidden w-full md:block md:w-auto">
         <button
           type="button"
           class="text-gray-200 bg-gradient-to-r from-[#f7b9c6] to-[#9bc6f3] font-medium rounded-lg text-sm px-5 py-3 mx-2 mb-2 focus:outline-2 border-2"
