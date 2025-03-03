@@ -1,5 +1,22 @@
 <script setup lang="ts">
 import NavbarMenu from "@/components/navbar-menu.vue";
+
+const icons = [
+  "i-simple-icons-instagram",
+  "i-simple-icons-facebook",
+  "i-simple-icons-x",
+  "i-simple-icons-twitter",
+  "i-simple-icons-youtube",
+  "i-simple-icons-linkedin",
+  "i-simple-icons-discord",
+  "i-simple-icons-tiktok",
+  "i-simple-icons-whatsapp",
+  "i-simple-icons-snapchat",
+  "i-simple-icons-pinterest",
+  "i-simple-icons-twitch",
+  "i-simple-icons-telegram",
+  "i-simple-icons-reddit",
+];
 </script>
 
 <template>
@@ -8,7 +25,9 @@ import NavbarMenu from "@/components/navbar-menu.vue";
     <div class="max-w-screen-xl items-center justify-between mx-auto">
       <img src="../assets/Vector.svg" alt="vector" class="px-20 py-10" />
     </div>
-    <div class="grid max-w-screen-xl px-4 py-2 mx-auto lg:grid-cols-12">
+    <div
+      class="grid max-w-screen-xl px-4 py-2 mx-auto lg:grid-cols-12 items-center"
+    >
       <div class="mr-auto place-self-center lg:col-span-7">
         <h1
           class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6x text-[#f4a2b4]"
@@ -40,13 +59,22 @@ import NavbarMenu from "@/components/navbar-menu.vue";
       </div>
       <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
         <div>
-          <img
-            src="../assets/Vector.svg"
-            width="80"
-            height="80"
-            alt="vector"
-            class="px-2"
-          />
+          <div class="flex justify-between py-2">
+            <img
+              src="../assets/Vector.svg"
+              width="80"
+              height="80"
+              alt="vector"
+              class="px-2"
+            />
+            <img
+              src="../assets/Vector.svg"
+              width="80"
+              height="80"
+              alt="vector"
+              class="px-2"
+            />
+          </div>
           <img
             src="../assets/hero.webp"
             alt="mockup"
@@ -62,27 +90,14 @@ import NavbarMenu from "@/components/navbar-menu.vue";
           />
         </div>
       </div>
-      <div class="flex justify-center items-center mt-4">
-        <img
-          src="../assets/logos/gmail.webp"
-          alt="discord"
-          class="w-15 rounded-full px-2"
-        />
-        <img
-          src="../assets/logos/google.webp"
-          alt="discord"
-          class="w-15 rounded-full px-2"
-        />
-        <img
-          src="../assets/logos/facebook.webp"
-          alt="discord"
-          class="w-15 rounded-full px-2"
-        />
-        <img
-          src="../assets/logos/weverse.webp"
-          alt="discord"
-          class="w-15 rounded-full px-2"
-        />
+      <div class="flex col-span-9 col-start-2 justify-center mx-auto mt-4">
+        <div>
+          <span
+            v-for="(icon, idx) in icons"
+            :key="idx"
+            :class="[icon, 'text-2xl mx-2 text-gray-800']"
+          />
+        </div>
       </div>
     </div>
   </div>
