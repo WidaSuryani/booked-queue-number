@@ -1,9 +1,5 @@
-<!-- <script setup lang="ts">
-import { useRouter } from "vue-router";
-</script> -->
-
 <template>
-  <nav class="bg-[#dae8f4]">
+  <nav class="bg-linear-to-r to-[#9bc6f3] from-[#f7b9c6]">
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto"
     >
@@ -39,7 +35,7 @@ import { useRouter } from "vue-router";
           <li class="py-2">
             <a
               href="#"
-              class="block py-3 px-4 text-gray-400 rounded-sm hover:outline hover:bg-gradient-to-r from-[#f7b9c6] to-[#9bc6f3] md:border-0 md:p-0"
+              class="block py-3 px-4 text-gray-100 rounded-sm hover:outline hover:bg-gradient-to-r from-[#f7b9c6] to-[#9bc6f3] md:border-0 md:p-0"
               aria-current="page"
               >Home</a
             >
@@ -47,7 +43,7 @@ import { useRouter } from "vue-router";
           <li class="py-2">
             <a
               href="#"
-              class="block py-3 px-4 text-gray-400 rounded-sm hoveroutline hover:bg-gradient-to-r from-[#f7b9c6] to-[#9bc6f3] md:border-0 md:p-0"
+              class="block py-3 px-4 text-gray-100 rounded-sm hoveroutline hover:bg-gradient-to-r from-[#f7b9c6] to-[#9bc6f3] md:border-0 md:p-0"
               >About</a
             >
           </li>
@@ -56,14 +52,14 @@ import { useRouter } from "vue-router";
       <div class="hidden w-full md:block md:w-auto">
         <button
           type="button"
-          class="text-gray-200 bg-gradient-to-r from-[#f7b9c6] to-[#9bc6f3] font-medium rounded-lg text-sm px-5 py-3 mx-2 mb-2 focus:outline-2 border-2"
+          class="text-white bg-[#afcdec] hover:bg-[#8cb8e5] font-medium rounded-lg text-sm px-5 py-3 mx-2 mb-2 focus:outline-2 border-2"
           @click="$router.push({ path: '/' })"
         >
           Login
         </button>
         <button
           type="button"
-          class="text-gray-200 bg-gradient-to-r from-[#f7b9c6] to-[#9bc6f3] font-medium rounded-lg text-sm px-5 py-3 mx-2 mb-2 focus:outline-2 border-2"
+          class="text-white bg-[#afcdec] hover:bg-[#8cb8e5] font-medium rounded-lg text-sm px-5 py-3 mx-2 mb-2 focus:outline-2 border-2"
         >
           Register
         </button>
