@@ -90,14 +90,26 @@ const icons = [
           />
         </div>
       </div>
-      <div class="flex col-span-9 col-start-2 justify-center mx-auto mt-4">
-        <div>
-          <span
-            v-for="(icon, idx) in icons"
-            :key="idx"
-            :class="[icon, 'text-2xl mx-2 text-gray-800']"
-          />
-        </div>
+      <div>
+        <img
+          src="../assets/Vector.svg"
+          width="40"
+          height="40"
+          alt="vector"
+          class="float-end pb-20"
+        />
+      </div>
+      <div class="flex col-span-9 col-start-2 justify-center py-10">
+        <h2 class="text-3xl font-semibold text-[#f4b2bf]">
+          Our Partner in Promoting this Product
+        </h2>
+      </div>
+      <div class="flex col-span-9 col-start-2 justify-center">
+        <span
+          v-for="(icon, idx) in icons"
+          :key="idx"
+          :class="[icon, 'text-3xl mx-2 text-gray-00']"
+        />
       </div>
     </div>
   </div>
