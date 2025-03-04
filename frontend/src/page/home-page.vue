@@ -19,6 +19,10 @@ const icons = [
 ];
 </script>
 
+<!-- <script setup lang="ts">
+// ...existing code...
+</script> -->
+
 <template>
   <NavbarMenu />
   <div class="bg-[#f6f6f6]">
@@ -26,9 +30,9 @@ const icons = [
       <img src="../assets/Vector.svg" alt="vector" class="px-20 py-10" />
     </div>
     <div
-      class="grid max-w-screen-xl px-4 py-2 mx-auto lg:grid-cols-12 items-center"
+      class="flex flex-col lg:flex-row max-w-screen-xl px-4 py-2 mx-auto items-center"
     >
-      <div class="mr-auto place-self-center lg:col-span-7">
+      <div class="flex-1 mr-auto place-self-center lg:w-7/12">
         <h1
           class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6x text-[#f4a2b4]"
         >
@@ -57,7 +61,7 @@ const icons = [
           </svg>
         </button>
       </div>
-      <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+      <div class="hidden lg:flex lg:w-5/12">
         <div>
           <div class="flex justify-between py-2">
             <img
@@ -99,12 +103,14 @@ const icons = [
           class="float-end pb-20"
         />
       </div>
-      <div class="flex col-span-9 col-start-2 justify-center py-10">
-        <h2 class="text-3xl font-semibold text-[#f4b2bf]">
+    </div>
+    <div class="w-full flex flex-wrap justify-center items-center py-10">
+      <div>
+        <h2 class="text-4xl text-center font-semibold text-[#f4b2bf]">
           Our Partner in Promoting this Product
         </h2>
       </div>
-      <div class="flex col-span-9 col-start-2 justify-center">
+      <div>
         <span
           v-for="(icon, idx) in icons"
           :key="idx"
