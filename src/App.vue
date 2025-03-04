@@ -1,22 +1,24 @@
 <script setup lang="ts">
-import LoginPage from "./components/LoginPage.vue";
+import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
+
+const isLoggedIn = ref(false);
+const router = useRouter();
+
+function handleLoginSuccess() {
+  isLoggedIn.value = true;
+  localStorage.setItem("isLoggedIn", "true");
+  router.push({ name: "FormBooking" }); // Redirect to the booking page using named route
+}
+
+onMounted(() => {
+  const savedLoginState = localStorage.getItem("isLoggedIn");
+  if (savedLoginState === "true") {
+    isLoggedIn.value = true;
+  }
+});
 </script>
 
 <template>
-  <LoginPage />
+  <router-view />
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
