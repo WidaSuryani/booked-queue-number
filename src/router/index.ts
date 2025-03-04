@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LoginPage from "@/page/login-page.vue";
-import FormBooking from "@/page/form-booking-page.vue";
+import HomePage from "@/page/home-page.vue";
 
 const routes = [
   {
@@ -9,9 +9,9 @@ const routes = [
     component: LoginPage,
   },
   {
-    path: "/form-booking",
-    name: "FormBooking",
-    component: FormBooking,
+    path: "/home-page",
+    name: "HomePage",
+    component: HomePage,
   },
 ];
 
