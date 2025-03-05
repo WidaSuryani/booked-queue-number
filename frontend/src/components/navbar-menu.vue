@@ -47,6 +47,13 @@
               >About</a
             >
           </li>
+          <li class="py-2">
+            <a
+              href="#"
+              class="block py-3 px-4 text-gray-100 rounded-sm hoveroutline hover:bg-gradient-to-r from-[#f7b9c6] to-[#9bc6f3] md:border-0 md:p-0"
+              >Contact</a
+            >
+          </li>
         </ul>
       </div>
       <div class="hidden w-full md:block md:w-auto">

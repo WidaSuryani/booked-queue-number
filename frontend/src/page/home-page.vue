@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import NavbarMenu from "@/components/navbar-menu.vue";
+import Footer from "@/components/footer.vue";
 
 const icons = [
   "i-simple-icons-instagram",
@@ -113,4 +114,5 @@ const icons = [
       </div>
     </div>
   </div>
+  <Footer />
 </template>
