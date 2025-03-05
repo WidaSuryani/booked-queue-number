@@ -26,15 +26,17 @@ const icons = [
 <template>
   <NavbarMenu />
   <div class="bg-[#f6f6f6]">
-    <div class="max-w-screen-xl items-center justify-between mx-auto">
-      <img src="../assets/Vector.svg" alt="vector" class="px-20 py-10" />
+    <div
+      class="max-w-screen-xl items-center justify-between mx-auto hidden lg:block lg:py-4"
+    >
+      <img src="../assets/Vector.svg" alt="vector" />
     </div>
     <div
-      class="flex flex-col lg:flex-row max-w-screen-xl px-4 py-2 mx-auto items-center"
+      class="flex flex-col-reverse max-w-screen-xl px-4 py-4 mx-auto items-center lg:py-2 lg:flex-row"
     >
-      <div class="flex-1 mr-auto place-self-center lg:w-7/12">
+      <div class="flex-1 mr-auto place-self-center py-8 lg:w-7/12">
         <h1
-          class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6x text-[#f4a2b4]"
+          class="max-w-2xl mb-4 text-4xl font-extrabold leading-none md:text-5xl xl:text-6x text-[#f4a2b4] lg:tracking-tight"
         >
           Let's book your Queue here, before trade your Ticket to a Wristband!
         </h1>
@@ -61,59 +63,23 @@ const icons = [
           </svg>
         </button>
       </div>
-      <div class="hidden lg:flex lg:w-5/12">
-        <div>
-          <div class="flex justify-between py-2">
-            <img
-              src="../assets/Vector.svg"
-              width="80"
-              height="80"
-              alt="vector"
-              class="px-2"
-            />
-            <img
-              src="../assets/Vector.svg"
-              width="80"
-              height="80"
-              alt="vector"
-              class="px-2"
-            />
-          </div>
-          <img
-            src="../assets/hero.webp"
-            alt="mockup"
-            width="500"
-            height="500"
-          />
-          <img
-            src="../assets/Vector.svg"
-            width="40"
-            height="40"
-            alt="vector"
-            class="float-end py-4"
-          />
+      <div class="lg:flex lg:w-5/12">
+        <div class="hidden lg:py-2 lg:block lg:px-2 lg:justify-between">
+          <img src="../assets/Vector.svg" width="80" height="80" alt="vector" />
         </div>
-      </div>
-      <div>
-        <img
-          src="../assets/Vector.svg"
-          width="40"
-          height="40"
-          alt="vector"
-          class="float-end pb-20"
-        />
+        <img src="../assets/hero.webp" alt="mockup" width="500" height="500" />
       </div>
     </div>
-    <div class="w-full flex flex-col">
-      <div class="flex pl-30 px:hidden">
+    <div class="flex flex-col max-w-screen-xl mx-auto py-8">
+      <div class="hidden lg:flex lg:justify-end lg:py-6">
         <img src="../assets/Vector.svg" alt="vector" width="60" height="60" />
       </div>
-      <div>
+      <div class="py-6">
         <h2 class="text-4xl text-center font-semibold text-[#f4b2bf]">
           Our Partner in Promoting this Product
         </h2>
       </div>
-      <div class="text-center">
+      <div class="text-center lg:py-4">
         <span
           v-for="(icon, idx) in icons"
           :key="idx"
