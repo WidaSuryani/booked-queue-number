@@ -104,13 +104,16 @@ const icons = [
         />
       </div>
     </div>
-    <div class="w-full flex flex-wrap justify-center items-center py-10">
+    <div class="w-full flex flex-col">
+      <div class="flex pl-30 px:hidden">
+        <img src="../assets/Vector.svg" alt="vector" width="60" height="60" />
+      </div>
       <div>
         <h2 class="text-4xl text-center font-semibold text-[#f4b2bf]">
           Our Partner in Promoting this Product
         </h2>
       </div>
-      <div>
+      <div class="text-center">
         <span
           v-for="(icon, idx) in icons"
           :key="idx"
