@@ -8,7 +8,7 @@ const login = () => {
   // Your login logic here
   const userId = "123"; // Example user ID
   emit("login-success");
-  router.push({ name: "FormBooking", params: { userId } }); // Pass userId as route param
+  router.push({ name: "HomePage", params: { userId } }); // Pass userId as route param
 };
 </script>
 

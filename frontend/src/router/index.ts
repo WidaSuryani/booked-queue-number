@@ -1,17 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
-import LoginPage from "@/page/login-page.vue";
-import FormBooking from "@/page/form-booking-page.vue";
+import LoginPage from "../page/login-page.vue";
+import HomePage from "../page/home-page.vue";
 
 const routes = [
   {
     path: "/",
-    name: "Home",
+    name: "LoginPage",
     component: LoginPage,
   },
   {
-    path: "/form-booking",
-    name: "FormBooking",
-    component: FormBooking,
+    path: "/home-page",
+    name: "HomePage",
+    component: HomePage,
   },
 ];
 
