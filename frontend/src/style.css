@@ -1,2 +1,11 @@
 @import "tailwindcss";
 @plugin '@egoist/tailwindcss-icons';
+
+@layer base {
+  body {
+    @apply bg-[#f6f6f6];
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+}
