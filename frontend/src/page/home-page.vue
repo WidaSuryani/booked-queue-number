@@ -19,10 +19,6 @@ const icons = [
 ];
 </script>
 
-<!-- <script setup lang="ts">
-// ...existing code...
-</script> -->
-
 <template>
   <NavbarMenu />
   <div class="bg-[#f6f6f6]">
